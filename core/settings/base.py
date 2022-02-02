@@ -1,4 +1,5 @@
-from pathlib import Path
+# from pathlib import Path
+from unipath import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -14,6 +15,7 @@ INSTALLED_APPS = [
     #local apps
     'applications.departamento',
     'applications.persona',
+    'applications.home',
 ]
 
 MIDDLEWARE = [
@@ -31,7 +33,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
