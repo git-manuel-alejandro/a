@@ -8,6 +8,8 @@ class EmpleadoAdmin(admin.ModelAdmin):
     search_fields = ('last_name',)
     list_filter = ('job','habilidades',)
     filter_horizontal = ('habilidades',)
+    #https://django-ckeditor.readthedocs.io/en/latest/
+
 
 
     def full_name(self, obj):
